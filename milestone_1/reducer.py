@@ -1,3 +1,4 @@
+#!/home/bigdata/anaconda3/bin/python
 import sys
 
 
@@ -13,11 +14,11 @@ for line in sys.stdin:
 	thisKey, thisSale = data
 	
 	if(oldKey and oldKey != thisKey):
-		print('%s\t%s' % (oldKey, str(salesTotal)))
+		print('%s\t%s' % (oldKey, str(round(salesTotal, 3))))
 		salesTotal = 0
 	
 	oldKey = thisKey
 	salesTotal += float(thisSale)
 
 if oldKey != None:
-	print('%s\t%s' % (oldKey, str(salesTotal)))
+	print('%s\t%s' % (oldKey, str(round(salesTotal, 3))))

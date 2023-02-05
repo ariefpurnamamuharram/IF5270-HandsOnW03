@@ -1,9 +1,9 @@
+#!/home/bigdata/anaconda3/bin/python
 import sys
 
 
 for line in sys.stdin:
-	line = line.strip()
-	data = line.split('\t')
+	data = line.strip().split('\t')
 	if len(data) == 6:
 		date, time, store, item, price, payment = data
 		item = item.lower()
